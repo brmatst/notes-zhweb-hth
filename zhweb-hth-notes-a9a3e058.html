@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>信息索引 · 华体会</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #fafafa;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: #1e293b;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 680px;
+            width: 90%;
+            margin: 0 auto;
+            padding: 3rem 0 4rem;
+        }
+
+        /* 极简留白 · 清晰层级 */
+        .hero-tag {
+            font-size: 0.8rem;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            color: #64748b;
+            margin-bottom: 1.5rem;
+            border-left: 3px solid #cbd5e1;
+            padding-left: 1rem;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+            margin-bottom: 1.8rem;
+            color: #0f172a;
+        }
+
+        .sub {
+            font-size: 1.05rem;
+            color: #475569;
+            margin-bottom: 2rem;
+            max-width: 580px;
+        }
+
+        .lead {
+            font-size: 1rem;
+            color: #334155;
+            margin-bottom: 2.5rem;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 1.8rem;
+        }
+
+        /* 特点卡片 — 轻量描边，留白呼吸 */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.2rem;
+            margin: 2.5rem 0 2.8rem;
+        }
+
+        .feature-card {
+            background: #ffffff;
+            border: 1px solid #e9edf2;
+            border-radius: 12px;
+            padding: 1.4rem 1.2rem;
+            transition: box-shadow 0.2s;
+        }
+
+        .feature-card:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            border-color: #d0d7e0;
+        }
+
+        .feature-card h3 {
+            font-weight: 500;
+            font-size: 1rem;
+            margin-bottom: 0.4rem;
+            color: #1e293b;
+        }
+
+        .feature-card p {
+            font-size: 0.88rem;
+            color: #5f6b7a;
+            line-height: 1.5;
+        }
+
+        .feature-icon {
+            display: block;
+            font-size: 1.25rem;
+            margin-bottom: 0.3rem;
+        }
+
+        /* 温和结语区 */
+        .closing {
+            margin: 2.8rem 0 2rem;
+            padding-top: 1.8rem;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .closing p {
+            font-size: 0.95rem;
+            color: #3f4a5a;
+            margin-bottom: 1rem;
+        }
+
+        .faq-mini {
+            margin-top: 2rem;
+            background: #f8f9fc;
+            border-radius: 16px;
+            padding: 1.5rem 1.8rem;
+        }
+
+        .faq-mini summary {
+            font-weight: 500;
+            font-size: 0.98rem;
+            color: #1e293b;
+            cursor: default;
+            padding: 0.2rem 0;
+        }
+
+        .faq-mini details p {
+            font-size: 0.9rem;
+            color: #4b5565;
+            margin-top: 0.5rem;
+            padding-left: 0.3rem;
+        }
+
+        details + details {
+            margin-top: 0.8rem;
+        }
+
+        .soft-link {
+            color: #2563eb;
+            text-decoration: none;
+            border-bottom: 1px solid #b4cdfa;
+            transition: border-color 0.15s;
+        }
+
+        .soft-link:hover {
+            border-bottom-color: #2563eb;
+        }
+
+        footer {
+            margin-top: auto;
+            padding: 1.5rem 0;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #8892a0;
+            border-top: 1px solid #eef2f6;
+        }
+
+        /* 响应式细节 */
+        @media (max-width: 520px) {
+            .container {
+                padding: 2rem 0 3rem;
+            }
+
+            h1 {
+                font-size: 1.7rem;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+                gap: 0.9rem;
+            }
+
+            .faq-mini {
+                padding: 1.2rem 1.2rem;
+            }
+
+            .hero-tag {
+                font-size: 0.7rem;
+                padding-left: 0.7rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero-tag">资料整理 · 信息索引</div>
+
+        <h1>把分散的线索<br>收束为有序的路径</h1>
+
+        <div class="sub">
+            关于「华体会」的内容聚合与结构归档。不堆砌术语，不制造焦虑，只做干净的信息中转。
+        </div>
+
+        <p class="lead">
+            最初只是几个零散的文档片段。随着资料积累，整理的需求从“保存”变成了“检索”：怎样让一条信息在需要时快速浮现？什么样的结构能兼顾深度与清晰度？<a href="https://zhweb-hth.com.cn" class="soft-link">华体会</a> 正是在这种追问中逐渐成型——它不是一个终点，而是一个持续收束的索引节点。
+        </p>
+
+        <!-- 特点列表：强调索引与组织逻辑 -->
+        <div class="feature-grid">
+            <div class="feature-card">
+                <span class="feature-icon">📁</span>
+                <h3>分类锚点</h3>
+                <p>按主题与用途划分模块，每一条资料都有明确的上下文归属。</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">🔗</span>
+                <h3>引用优先</h3>
+                <p>保持与原始来源的连通，减少二次转述带来的信息衰减。</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">🧹</span>
+                <h3>低噪结构</h3>
+                <p>不插入无关装饰或冗余提示，页面本身即是整理工具的一部分。</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">📋</span>
+                <h3>渐进归档</h3>
+                <p>内容随理解更新而迭代，旧条目不会被删除，而是被重新组织。</p>
+            </div>
+        </div>
+
+        <!-- 温和结尾 + 语境说明 -->
+        <div class="closing">
+            <p>
+                资料整理的意义不在于堆积数量，而在于建立可通行的路径。每一处记录都应该经得起反复回溯，每一个链接都要有真实的落脚点。
+            </p>
+            <p>
+                如果你也在寻找一个信息密度适中、结构清晰的内容索引，可以留意 <a href="https://zhweb-hth.com.cn" class="soft-link">华体会</a> 的持续更新。这里没有速成清单，只有经过筛选与归类的原始片段。
+            </p>
+        </div>
+
+        <!-- FAQ 摘要式片段：保持信息密度但轻松 -->
+        <div class="faq-mini">
+            <details open>
+                <summary>📌 索引面向哪些场景？</summary>
+                <p>日常查阅、主题调研、跨文档对比。模块按内容类型分组，每个卡片对应一个独立条目。</p>
+            </details>
+            <details>
+                <summary>📌 内容会频繁变化吗？</summary>
+                <p>结构与核心条目相对稳定，新增内容会以附录或扩展卡片形式加入，不影响已有路径。</p>
+            </details>
+            <details>
+                <summary>📌 是否可以引用或转发？</summary>
+                <p>可以。页面内所有信息均来自公开可查的原始素材，引用时建议注明来源节点。</p>
+            </details>
+        </div>
+    </div>
+
+    <footer>
+        <span>资料归档 · 索引页 · 内容持续完善</span>
+    </footer>
+</body>
+</html>
