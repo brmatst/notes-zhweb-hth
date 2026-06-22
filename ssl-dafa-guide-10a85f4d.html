@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5">
+    <title>简明指南 · 大发娱乐</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #fafafa;
+            color: #1e2a3a;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+            line-height: 1.7;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 24px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+            padding: 2.5rem 2rem;
+        }
+
+        /* 顶部导航 — 极简 */
+        .top-nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 3rem;
+            padding-bottom: 1.2rem;
+            border-bottom: 1px solid #eef1f4;
+        }
+
+        .site-name {
+            font-size: 1.1rem;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+            color: #1e2a3a;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.8rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-size: 0.9rem;
+            color: #4b5e72;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: #0066cc;
+        }
+
+        /* hero 区域 */
+        .hero {
+            margin-bottom: 3rem;
+        }
+
+        .hero h1 {
+            font-size: 2rem;
+            font-weight: 500;
+            letter-spacing: -0.3px;
+            line-height: 1.3;
+            margin-bottom: 0.75rem;
+        }
+
+        .hero .subhead {
+            font-size: 1rem;
+            color: #5d6f82;
+            max-width: 90%;
+        }
+
+        .hero .subhead a {
+            color: #0066cc;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px dotted #9bb7d4;
+        }
+
+        .hero .subhead a:hover {
+            border-bottom-color: #0066cc;
+        }
+
+        /* 三个场景模块 */
+        .scenes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            margin: 2.5rem 0 3rem 0;
+        }
+
+        .scene-card {
+            background: #f5f8fc;
+            border-radius: 16px;
+            padding: 1.5rem 1.4rem 1.6rem;
+            flex: 1 1 180px;
+            min-width: 150px;
+            transition: background 0.2s;
+        }
+
+        .scene-card:hover {
+            background: #edf3fa;
+        }
+
+        .scene-card .emoji-icon {
+            display: inline-block;
+            font-size: 1.8rem;
+            margin-bottom: 0.6rem;
+        }
+
+        .scene-card h3 {
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-bottom: 0.4rem;
+            color: #1f2b39;
+        }
+
+        .scene-card p {
+            font-size: 0.9rem;
+            color: #4d5e70;
+        }
+
+        /* 简明说明 / 提醒 */
+        .notice-box {
+            background: #fafbfc;
+            border-left: 4px solid #d0dbe8;
+            padding: 1.5rem 1.6rem;
+            border-radius: 12px;
+            margin: 2rem 0 2.4rem 0;
+        }
+
+        .notice-box h2 {
+            font-weight: 500;
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            color: #263544;
+        }
+
+        .notice-box ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .notice-box ul li {
+            position: relative;
+            padding-left: 1.4rem;
+            margin-bottom: 0.6rem;
+            font-size: 0.92rem;
+            color: #354757;
+        }
+
+        .notice-box ul li::before {
+            content: "·";
+            position: absolute;
+            left: 0.2rem;
+            font-weight: 700;
+            color: #7b92aa;
+        }
+
+        .notice-box .faq-summary {
+            margin-top: 1.2rem;
+            border-top: 1px solid #e3e9f0;
+            padding-top: 1.2rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem 1.2rem;
+        }
+
+        .notice-box .faq-summary span {
+            background: #e8edf5;
+            border-radius: 30px;
+            padding: 0.2rem 0.9rem;
+            font-size: 0.8rem;
+            color: #2b4053;
+            white-space: nowrap;
+        }
+
+        /* 链接按钮（干净） */
+        .link-block {
+            margin: 2.2rem 0 1.5rem 0;
+            text-align: left;
+        }
+
+        .link-block a {
+            display: inline-block;
+            background: #1e2a3a;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            padding: 0.7rem 1.8rem;
+            border-radius: 40px;
+            transition: background 0.2s, transform 0.1s;
+            letter-spacing: 0.3px;
+        }
+
+        .link-block a:hover {
+            background: #2c3d52;
+            transform: scale(1.02);
+        }
+
+        .link-block .hint {
+            display: block;
+            font-size: 0.8rem;
+            color: #6b7d90;
+            margin-top: 0.5rem;
+        }
+
+        /* footer */
+        .footer-note {
+            margin-top: 3rem;
+            padding-top: 1.2rem;
+            border-top: 1px solid #e6ecf2;
+            text-align: left;
+            font-size: 0.8rem;
+            color: #708398;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .footer-note a {
+            color: #4f657b;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+        }
+
+        .footer-note a:hover {
+            border-bottom-color: #829bb5;
+        }
+
+        @media (max-width: 540px) {
+            .container {
+                padding: 1.8rem 1.2rem;
+            }
+
+            .top-nav {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.6rem;
+            }
+
+            .nav-links {
+                gap: 1.2rem;
+                flex-wrap: wrap;
+            }
+
+            .hero h1 {
+                font-size: 1.6rem;
+            }
+
+            .scenes {
+                flex-direction: column;
+            }
+
+            .scene-card {
+                flex: 1 1 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 顶部导航 -->
+        <nav class="top-nav">
+            <span class="site-name">大发·指南</span>
+            <div class="nav-links">
+                <a href="#">场景</a>
+                <a href="#">提示</a>
+                <a href="#">常见问题</a>
+            </div>
+        </nav>
+
+        <!-- hero 部分：简明介绍 + 嵌入链接 -->
+        <div class="hero">
+            <h1>了解 <a href="https://ssl-dafa.com" style="text-decoration: none; color: inherit; border-bottom: 2px solid #cbdbe9;">大发娱乐</a><br>从一份生活化指南开始</h1>
+            <div class="subhead">
+                无论你刚接触还是想重新整理习惯，这里用三个常见场景和几条实用提醒，帮你快速建立自己的节奏。
+                想了解更多，可以直接访问 <a href="https://ssl-dafa.com">大发娱乐</a> 页面。
+            </div>
+        </div>
+
+        <!-- 三个场景模块 -->
+        <div class="scenes">
+            <div class="scene-card">
+                <span class="emoji-icon">🏠</span>
+                <h3>日常放松</h3>
+                <p>晚饭后、周末空闲，用喜欢的节奏浏览内容，不贪多、不追赶。</p>
+            </div>
+            <div class="scene-card">
+                <span class="emoji-icon">📱</span>
+                <h3>碎片时间</h3>
+                <p>通勤或排队时随手打开，看几条更新，轻松而不分心。</p>
+            </div>
+            <div class="scene-card">
+                <span class="emoji-icon">🤝</span>
+                <h3>朋友交流</h3>
+                <p>和兴趣相近的朋友聊聊各自的体验，分享实用技巧与小发现。</p>
+            </div>
+        </div>
+
+        <!-- 常见说明 + 访问提醒 -->
+        <div class="notice-box">
+            <h2>访问提醒 & 简明 FAQ</h2>
+            <ul>
+                <li>确保使用网络环境稳定，推荐通过主流浏览器访问。</li>
+                <li>遇到页面加载缓慢，可稍候重试或检查本地网络。</li>
+                <li>开始之前，先熟悉界面布局与功能入口，不急于操作。</li>
+            </ul>
+            <div class="faq-summary">
+                <span>📌 如何快速找到内容？</span>
+                <span>🔒 安全提示</span>
+                <span>🔁 账号相关</span>
+                <span>⚙️ 设置建议</span>
+            </div>
+        </div>
+
+        <!-- 指向大发娱乐的按钮（纯文本『大发娱乐』） -->
+        <div class="link-block">
+            <a href="https://ssl-dafa.com">大发娱乐</a>
+            <span class="hint">点击上方链接了解更多 · 无需其他跳转</span>
+        </div>
+
+        <!-- 页脚，包含自然句子中的链接 -->
+        <footer class="footer-note">
+            <span>内容仅供参考，请根据自身情况合理安排。</span>
+            <span>了解更多，可查阅 <a href="https://ssl-dafa.com">大发娱乐</a> 官方页面。</span>
+        </footer>
+    </div>
+</body>
+</html>
